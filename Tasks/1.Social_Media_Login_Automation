@@ -1,0 +1,15 @@
+# Social Media Login Automation
+
+from selenium import webdriver
+
+driver = webdriver.Firefox()
+driver.get("https://www.facebook.com/")
+
+email_field = driver.find_element_by_id("email")
+email_field.send_keys("your_email_or_phone")
+
+password_field = driver.find_element_by_id("pass")
+password_field.send_keys("your_password")
+
+login_button = driver.find_element_by_id("loginbutton")
+login_button.click()
